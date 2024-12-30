@@ -1,49 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>News App</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <nav>
-    <div class="main-nav container flex">
-      <a class="company-logo" href="#" onclick="reload()">
-        <img src="assets/Logo.png" alt="Truth News">
-      </a>
-      <div class="nav-links">
-        <ul class="flex">
-          <li class="hover-link nav-items" id="technology" onclick="onNavItemClick('technology')">Technology</li>
-          <li class="hover-link nav-items" id="finance" onclick="onNavItemClick('finance')">Finance</li>
-          <li class="hover-link nav-items" id="politics" onclick="onNavItemClick('politics')">Politics</li>
-        </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="main-nav container flex">
+        <a class="company-logo" href="#" onclick="reload()">
+          <img src="assets/Logo.png" alt="Truth News" />
+        </a>
+        <div class="nav-links">
+          <ul class="flex">
+            <li
+              class="hover-link nav-items"
+              id="technology"
+              onclick="onNavItemClick('technology')"
+            >
+              Technology
+            </li>
+            <li
+              class="hover-link nav-items"
+              id="finance"
+              onclick="onNavItemClick('finance')"
+            >
+              Finance
+            </li>
+            <li
+              class="hover-link nav-items"
+              id="politics"
+              onclick="onNavItemClick('politics')"
+            >
+              Politics
+            </li>
+          </ul>
+        </div>
+        <div class="search-bar flex">
+          <input
+            type="text"
+            class="news-input"
+            id="search-text"
+            placeholder="e.g. Lawrence Bishnoi"
+          />
+          <button class="search-button" id="search-button">Search</button>
+        </div>
       </div>
-      <div class="search-bar flex">
-        <input type="text" class="news-input" id="search-text" placeholder="e.g. Lawrence Bishnoi">
-        <button class="search-button" id="search-button">Search</button>
-      </div>
-    </div>
-  </nav>
-  <main>
-    <div class="cards-container container flex" id="cards-container">
-      
-    </div>
-  </main>
+    </nav>
+    <main>
+      <div class="cards-container container flex" id="cards-container"></div>
+    </main>
 
-  <template id="template-news-card">
-    <div class="card">
-      <div class="card-header">
-        <img src="https://via.placeholder.com/400x200" alt="News image" id="news-img">
+    <template id="template-news-card">
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://via.placeholder.com/400x200"
+            alt="News image"
+            id="news-img"
+          />
+        </div>
+        <div class="card-content">
+          <h3 id="news-title">This is the title</h3>
+          <h6 class="news-source" id="news-source">Salmon Bhai</h6>
+          <p class="news-desc" id="news-desc">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, rem!
+          </p>
+        </div>
       </div>
-      <div class="card-content">
-        <h3 id="news-title">This is the title</h3>
-        <h6 class="news-source" id="news-source">Salmon Bhai</h6>
-        <p class="news-desc" id="news-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, rem!</p>
-      </div>
-    </div>
-  </template>
+    </template>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js" type="module"></script>
+  </body>
 </html>
